@@ -1,0 +1,108 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.2'
+    }
+}
+// 声明是Android程序
+apply plugin: 'android'
+apply plugin: 'android-apt'
+
+apply plugin: 'com.android.application' //or apply plugin: 'java'
+apply plugin: 'me.tatarka.retrolambda'
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile 'com.android.support:support-v4:22.1.1'
+    apt "org.androidannotations:androidannotations:3.2+"
+    compile 'org.androidannotations:androidannotations-api:3.2+'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile('de.keyboardsurfer.android.widget:crouton:1.8.5@aar') {
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:+'
+    compile project(':library')
+    compile project(':library2')
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    compile files('libs/BmobSDK_V3.4.4_0930.jar')
+}
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+}
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.chillax.softwareyard"
+        minSdkVersion 13
+        targetSdkVersion 22
+        versionCode 5
+        versionName "1.4"
+        testApplicationId 'com.chillax.test'
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    buildTypes {
+        release {
+            // 是否进行混淆
+            minifyEnabled false
+            shrinkResources false
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false;
+            shrinkResources false;
+        }
+    }
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false
+    }
+
+}

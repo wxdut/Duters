@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="button_back">#ae9471</color>
+    <color name="light">#FFFC8D3B</color>
+    <color name="title">#5b4120</color>
+    <color name="text">#595959</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFF8DC</color>
+    <color name="red">#cc3333</color>
+    <color name="blue">#42d4c7</color>
+    <color name="red_white">#FFE7BA</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="green">#009999</color>
+    <color name="purple">#CC3366</color>
+
+
+
+    <color name="actionbar_bg">#55a6ff</color>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/leader1"/>
+    <TextView
+        android:id="@+id/comein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击进入>>>"
+        android:textSize="22sp"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/comein"/>
+</RelativeLayout>

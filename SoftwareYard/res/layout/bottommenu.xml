@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_menu_bg"
+    android:padding="10dp"
+     >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/zhouzhi"
+                style="@style/bottom_menu_iv" />
+
+            <TextView
+                android:id="@+id/tv_zhouzhi"
+                style="@style/bottom_menu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="学生周知" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/table"
+                style="@style/bottom_menu_iv" />
+
+            <TextView
+                android:id="@+id/tv_table"
+                style="@style/bottom_menu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="学期课表" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="fill_parent" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/self"
+                style="@style/bottom_menu_iv" />
+
+            <TextView
+                android:id="@+id/tv_self"
+                style="@style/bottom_menu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="个人中心" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

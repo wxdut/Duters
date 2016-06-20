@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:singleLine="true"
+        android:text="测试数据1"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/course_note"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/pencil"
+            android:layout_marginRight="5dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/course_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4b4b4b"
+            android:gravity="center"
+            android:text="测试数据2"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>

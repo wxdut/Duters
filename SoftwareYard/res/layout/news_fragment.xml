@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:gravity="center">
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:type="sun">
+
+        <com.chillax.pulltorefrushlistview.PullToRefreshListView
+            android:id="@+id/ptrlv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/listview_line" />
+
+    </com.yalantis.phoenix.PullToRefreshView>
+
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.chillax.softwareyard.customview.TopBar_
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.chillax.softwareyard.customview.TopBar_>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.yalantis.taurus.PullToRefreshView
+            xmlns:app="com.yalantis.taurus.PullToRefreshView"
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:type="sun">
+
+            <ExpandableListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/exam_score_list_bg"
+                android:cacheColorHint="#00000000"
+                android:divider="#ebebeb"
+                android:dividerHeight="1dp"
+                android:footerDividersEnabled="false"
+                android:groupIndicator="@null" />
+        </com.yalantis.taurus.PullToRefreshView>
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="手指下滑刷新"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

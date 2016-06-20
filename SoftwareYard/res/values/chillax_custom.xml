@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyImageView">
+        <attr name="stroke" format="dimension" />
+        <attr name="color" format="string" />
+    </declare-styleable>
+    <style name="cus_dialog_style" parent="android:style/Theme.Dialog" >
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+    <style name="cus_dialog_style2" parent="android:style/Theme.Dialog" >
+        <item name="android:windowBackground">@drawable/photo_choose_bg2</item>
+    </style>
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+    <declare-styleable name="ImgListView">
+        <attr name="headimage" format="reference|color" />
+    </declare-styleable>
+</resources>

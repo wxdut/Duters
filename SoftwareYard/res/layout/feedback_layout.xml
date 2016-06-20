@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.chillax.softwareyard.customview.TopBar_
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"/>
+    <LinearLayout
+        android:layout_below="@id/topBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_margin="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="反馈中心"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="      该功能正在开发中，如果你对软件有什么意见或建议，欢迎通过以下方式反馈给我。谢谢你的支持。"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="联系方式"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="left"
+            android:autoLink="email"
+            android:text="QQ：805377860"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textIsSelectable="true"
+            android:autoLink="web"
+            android:layout_gravity="left"
+            android:text="邮箱：hello_chillax@163.com"/>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.chillax.softwareyard.customview.ActionBar_
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.chillax.softwareyard.customview.ActionBar_>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
+
+    <com.chillax.softwareyard.customview.BottomMenu_
+        android:id="@+id/bottommenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.chillax.softwareyard.customview.BottomMenu_>
+
+</LinearLayout>
